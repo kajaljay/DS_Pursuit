@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[14]:
+# In[29]:
 
 
 # SUBSET CALCULATOR
@@ -27,7 +27,7 @@ def contloop(lst,num):
 
 
 #Entry form the user
-a = input('Enter a series of numbers: ')
+a = input('Enter a series of numbers seperated by commas: ')
 selection = eval(input('''Choose an operation to perform from below:
 1 - Subsets of 2
 2 - Substets of 3
@@ -37,10 +37,11 @@ selection = eval(input('''Choose an operation to perform from below:
 
 #Converting input string into list of integers
 num1 = []
+a = a.split(',')
 for i in a:
-    if i != ' ':
+    if i != ',':
         num1.append(int(i))
-
+        
 #Loop to create all subsets
 subsets = []
 for i in range(len(num1)):
